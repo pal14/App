@@ -1,4 +1,4 @@
-# App
+# Tutorial App
 
 This app is a basic Investment app which can be used to store the Investment details uses MEAN stack along with passportjs to provide authentication to the user.
 
