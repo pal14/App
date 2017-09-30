@@ -1,0 +1,29 @@
+{
+  "name": "investmentapp",
+  "version": "1.0.0",
+  "description": "Investment app with authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Palash Harchandani",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "^4.1.1",
+    "mongodb": "*",
+    "mongojs": "^2.4.1",
+    "mongoose": "*",
+    "passport": "^0.4.0",
+    "passport-http": "*",
+    "passport-local": "^1.0.0"
+  }
+}

@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE>
+
+<html ng-app="FDApp">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<title> Investment Tracking App </title>
+
+</head>
+
+
+<body>
+  <div class="container" ng-controller="FDctrl">
+  <h1> Investment Tracking App </h1>
+  <form action = "/users/logout" method = "get">
+        <button class="btn btn-primary"> LOGOUT </button>
+    </form>
+  
+  <table class="table" border="0">
+    <thead>
+      <tr>
+      <th> Investment Name </th>
+      <th> Investee </th>
+      <th> Investment Date </th>
+      <th> Maturity Date </th>
+      <th> Investment Amount </th>
+      <th> Maturity Amount </th>
+      <th> Action </th>
+      <th> &nbsp; </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input class="form-control" ng-model="inv.type"></td>
+        <td><input class="form-control" ng-model="inv.Investee"></td>
+        <td><input class="form-control" ng-model="inv.invDate"></td>
+        <td><input class="form-control" ng-model="inv.maturityDate"></td>
+        <td><input class="form-control" ng-model="inv.invAmount"></td>
+        <td><input class="form-control" ng-model="inv.maturityAmount"></td>
+        <td><button class="btn btn-primary" ng-click="addInvestment()"> ADD </button></td>
+        <td><button class="btn btn-info" ng-click="update()"> UPDATE </button></td>
+
+      </tr>
+      <tr ng-repeat="investment in investment">
+        <td>{{investment.type}}</td>
+        <td>{{investment.Investee}}</td>
+        <td>{{investment.invDate}}</td>
+        <td>{{investment.maturityDate}}</td>
+        <td>{{investment.invAmount}}</td>
+        <td>{{investment.maturityAmount}}</td>
+        <td><button class="btn btn-danger" ng-click="remove(investment._id)">Remove</button></td>
+        <td><button class="btn btn-warning" ng-click="edit(investment._id)">Edit</button></td>
+        
+
+
+      </tr>
+    </tbody>
+
+  </table>
+  
+</div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="/../js/FDCtrl.js"></script>
+
+</body>
+</html>
