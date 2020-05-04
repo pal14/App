@@ -16,7 +16,8 @@ mongoose.connect('mongodb://localhost/trial');
 var db = mongoose.connection;
 
 
-
+console.log("testing");
+console.log("testing1");
 
 app.use(express.static(__dirname + "/public"));
 //app.use(express.static(__dirname, 'public'), {index: ''});
