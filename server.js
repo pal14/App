@@ -15,7 +15,6 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/trial');
 var db = mongoose.connection;
 
-
 console.log("testing");
 console.log("testing1");
 
