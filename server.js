@@ -17,6 +17,7 @@ var db = mongoose.connection;
 
 console.log("testing");
 console.log("testing1");
+console.log("testing2");
 
 app.use(express.static(__dirname + "/public"));
 //app.use(express.static(__dirname, 'public'), {index: ''});
