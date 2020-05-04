@@ -15,10 +15,6 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/trial');
 var db = mongoose.connection;
 
-
-console.log("testing");
-console.log("testing3");
-
 app.use(express.static(__dirname + "/public"));
 //app.use(express.static(__dirname, 'public'), {index: ''});
 app.use(bodyparser.json());
